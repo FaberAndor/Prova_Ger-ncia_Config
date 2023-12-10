@@ -6,6 +6,10 @@ function subtract(a, b) {
     return a - b;
 }
 
+function multiply(a, b) {
+    return a * b;
+}
+
 function calculate(operation) {
     var num1 = parseFloat(document.getElementById('num1').value);
     var num2 = parseFloat(document.getElementById('num2').value);
@@ -18,7 +22,10 @@ function calculate(operation) {
         case 'subtract':
             result = subtract(num1, num2);
             break;
-        // Você pode adicionar mais operações aqui conforme necessário
+        case 'multiply':
+            result = multiply(num1, num2);
+            break;
+
         default:
             result = 'Operação inválida';
     }
