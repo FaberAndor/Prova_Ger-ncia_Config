@@ -10,6 +10,13 @@ function multiply(a, b) {
     return a * b;
 }
 
+function divide(a, b) {
+    if(b === 0) {
+        return 'Erro: Divisão por zero';
+    }
+    return a / b;
+}
+
 function calculate(operation) {
     var num1 = parseFloat(document.getElementById('num1').value);
     var num2 = parseFloat(document.getElementById('num2').value);
@@ -24,6 +31,9 @@ function calculate(operation) {
             break;
         case 'multiply':
             result = multiply(num1, num2);
+            break;
+        case 'divide':
+            result = divide(num1, num2);
             break;
 
         default:
